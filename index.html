@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>김종헌 | 프로젝트 관리자</title>
+  <!-- qrcode.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -13,30 +15,34 @@
 
     body {
       font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', sans-serif;
-      background: linear-gradient(160deg, #fdf6ec 0%, #f5e6c8 100%);
+      background: linear-gradient(160deg, #121212 0%, #1e1e1e 100%);
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       padding: 24px 16px 48px;
-      color: #2c1f0f;
+      color: #e0e0e0;
     }
 
     .card {
       width: 100%;
       max-width: 420px;
-      background: rgba(255, 253, 248, 0.85);
+      background: rgba(30, 30, 30, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.15); /* 골드 테두리 */
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(160, 100, 40, 0.14);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
       overflow: hidden;
+      position: relative;
     }
 
     /* ── 헤더: 이름 & 역할 ── */
     .header {
-      background: linear-gradient(135deg, #7a4f2a 0%, #c8874a 100%);
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c2518 100%);
       color: #fff;
       text-align: center;
       padding: 40px 24px 30px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
     }
 
     .header h1 {
@@ -44,24 +50,36 @@
       font-weight: 800;
       letter-spacing: 0.18em;
       margin-bottom: 10px;
+      color: #d4af37; /* 메탈릭 골드 */
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
     .header .role {
       font-size: 1.02rem;
       letter-spacing: 0.08em;
-      opacity: 0.92;
+      opacity: 0.85;
+      color: #b0b0b0;
+    }
+
+    .header .intro {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #cccccc;
+      margin-top: 16px;
+      padding: 0 10px;
+      word-break: keep-all;
     }
 
     /* ── 주요 경력 ── */
     .career {
       padding: 28px 26px 22px;
-      border-bottom: 1px solid rgba(180, 120, 50, 0.18);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .section-label {
       font-size: 0.72rem;
       font-weight: 700;
-      color: #c8874a;
+      color: #d4af37;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 16px;
@@ -83,18 +101,20 @@
       height: 8px;
       min-width: 8px;
       border-radius: 50%;
-      background: #c8874a;
+      background: #d4af37;
       margin-top: 7px;
+      box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
     }
 
     .career-item span {
       font-size: 0.97rem;
       line-height: 1.6;
-      color: #2c1f0f;
+      color: #cccccc;
     }
 
     .career-item strong {
-      color: #7a4f2a;
+      color: #ffffff;
+      font-weight: 600;
     }
 
     /* ── 사진 & 연락처 ── */
@@ -103,24 +123,7 @@
       align-items: center;
       gap: 22px;
       padding: 24px 26px;
-      border-bottom: 1px solid rgba(180, 120, 50, 0.18);
-    }
-
-    /* 프로필 사진 - 실제 사진으로 교체하려면:
-       1. 사진 파일(예: photo.jpg)을 index.html과 같은 폴더에 저장
-       2. 아래 <div class="photo-box"> 전체를
-          <img src="photo.jpg" class="real-photo" alt="김종헌 사진">
-          으로 교체 */
-    .photo-box {
-      flex-shrink: 0;
-      width: 92px;
-      height: 112px;
-      border-radius: 12px;
-      background: linear-gradient(175deg, #b8b0a4 0%, #7a7068 100%);
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .real-photo {
@@ -129,7 +132,9 @@
       height: 112px;
       border-radius: 12px;
       object-fit: cover;
-      filter: grayscale(100%) contrast(1.05);
+      filter: grayscale(15%) contrast(1.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background-color: #2a2a2a;
     }
 
     .contact {
@@ -157,21 +162,28 @@
     .contact-row a {
       font-size: 0.93rem;
       line-height: 1.45;
-      color: #2c1f0f;
+      color: #e0e0e0;
       text-decoration: none;
       word-break: break-all;
+      transition: color 0.2s;
     }
 
     .contact-row a:hover {
-      color: #7a4f2a;
+      color: #d4af37;
       text-decoration: underline;
     }
 
     /* ── 액션 버튼 ── */
     .actions {
       display: flex;
+      flex-direction: column;
       gap: 12px;
       padding: 22px 26px 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
     }
 
     .btn {
@@ -180,34 +192,105 @@
       align-items: center;
       justify-content: center;
       gap: 7px;
-      padding: 15px 8px;
+      padding: 14px 8px;
       border-radius: 12px;
       font-family: inherit;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       letter-spacing: 0.03em;
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: transform 0.12s, opacity 0.12s;
+      transition: all 0.2s;
       -webkit-tap-highlight-color: transparent;
     }
 
     .btn:active {
-      transform: scale(0.95);
-      opacity: 0.8;
+      transform: scale(0.96);
     }
 
-    .btn-call {
-      background: linear-gradient(135deg, #7a4f2a 0%, #c8874a 100%);
-      color: #fff;
+    /* 연락처 저장 메인 버튼 */
+    .btn-save {
+      background: linear-gradient(135deg, #d4af37 0%, #aa8529 100%);
+      color: #121212;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      width: 100%;
+    }
+    
+    .btn-save:hover {
+      background: linear-gradient(135deg, #e5c158 0%, #bc963a 100%);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     }
 
-    .btn-email {
+    /* 서브 액션 버튼 */
+    .btn-call, .btn-email, .btn-qr {
+      background: #2a2a2a;
+      color: #d4af37;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-call:hover, .btn-email:hover, .btn-qr:hover {
+      background: #333333;
+      border-color: #d4af37;
+    }
+
+    /* ── QR 코드 모달 ── */
+    .modal-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .qr-container {
       background: #fff;
-      color: #7a4f2a;
-      border: 2px solid #c8874a;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+      transform: scale(0.8);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+
+    .modal-overlay.active .qr-container {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      background: transparent;
+      color: #e0e0e0;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .modal-text {
+      color: #d4af37;
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
   </style>
 </head>
 <body>
@@ -217,35 +300,30 @@
     <header class="header">
       <h1>김 종 헌</h1>
       <p class="role">프로젝트 관리자 (Project Manager)</p>
+      <p class="intro">다수의 ERP 및 SCM 구축을 성공적으로 이끌며, 비즈니스 프로세스 혁신과 시스템 안정화를 주도하는 30년 경력의 IT 전문가입니다.</p>
     </header>
 
     <!-- 주요 경력 -->
     <section class="career">
-      <p class="section-label">주요 경력</p>
+      <p class="section-label">핵심 역량</p>
       <div class="career-item">
         <div class="dot"></div>
-        <span>SCM 전문가 <strong>20년</strong></span>
+        <span>SAP SCM 전문가 <strong>(PP / APO 모듈)</strong></span>
       </div>
       <div class="career-item">
         <div class="dot"></div>
-        <span>ERP 구축 컨설턴트 <strong>10년</strong></span>
+        <span>프로젝트 품질 보증 <strong>(QA)</strong> 및 이슈 해결</span>
       </div>
       <div class="career-item">
         <div class="dot"></div>
-        <span>프로젝트 매니저 <strong>(PMP)</strong></span>
+        <span>공급망 관리 <strong>PI(Process Innovation)</strong> 컨설팅</span>
       </div>
     </section>
 
     <!-- 사진 & 연락처 -->
     <section class="profile">
-      <!-- 사진 자리표시자 (교체 방법은 위 CSS 주석 참고) -->
-      <div class="photo-box" role="img" aria-label="프로필 사진">
-        <svg width="92" height="98" viewBox="0 0 92 98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="46" cy="32" r="22" fill="#ddd6cc"/>
-          <ellipse cx="46" cy="92" rx="42" ry="32" fill="#ccc4b8"/>
-          <ellipse cx="46" cy="72" rx="20" ry="12" fill="#c0b8ac"/>
-        </svg>
-      </div>
+      <!-- 프로필 사진 -->
+      <img src="photo.jpg" class="real-photo" alt="김종헌 사진" onerror="this.src='https://via.placeholder.com/92x112/2a2a2a/d4af37?text=Photo'">
 
       <div class="contact">
         <div class="contact-row">
@@ -261,14 +339,93 @@
 
     <!-- 액션 버튼 -->
     <div class="actions">
-      <a href="tel:01030989055" class="btn btn-call">
-        📞 전화 걸기
-      </a>
-      <a href="mailto:jonghun.kim84@gmail.com" class="btn btn-email">
-        ✉️ 이메일
-      </a>
+      <!-- 연락처 저장 메인 버튼 -->
+      <button onclick="downloadVCard()" class="btn btn-save">
+        💾 내 연락처 저장하기
+      </button>
+
+      <!-- 서브 버튼 그룹 -->
+      <div class="btn-group">
+        <button onclick="openQR()" class="btn btn-qr">
+          📱 QR 보기
+        </button>
+        <a href="tel:01030989055" class="btn btn-call">
+          📞 전화
+        </a>
+        <a href="mailto:jonghun.kim84@gmail.com" class="btn btn-email">
+          ✉️ 이메일
+        </a>
+      </div>
+    </div>
+
+    <!-- QR 코드 모달 -->
+    <div id="qrModal" class="modal-overlay">
+      <p class="modal-text">카메라로 스캔하여 명함 저장</p>
+      <div class="qr-container" id="qrcode"></div>
+      <button onclick="closeQR()" class="modal-close">닫기</button>
     </div>
 
   </div>
+
+  <script>
+    // 1. vCard 다운로드 기능
+    function downloadVCard() {
+      const vcard = `BEGIN:VCARD
+VERSION:3.0
+N:김;종헌;;;
+FN:김종헌
+TITLE:프로젝트 관리자 (Project Manager)
+TEL;TYPE=CELL:010-3098-9055
+EMAIL:jonghun.kim84@gmail.com
+NOTE:SCM 전문가, ERP 구축 컨설턴트
+END:VCARD`;
+
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', '김종헌_명함.vcf');
+      document.body.appendChild(link);
+      link.click();
+      
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    // 2. QR 코드 기능
+    const qrModal = document.getElementById('qrModal');
+    const qrContainer = document.getElementById('qrcode');
+    let qrCodeGenerated = false;
+
+    function openQR() {
+      qrModal.classList.add('active');
+      
+      if (!qrCodeGenerated) {
+        // 현재 URL 가져오기 (로컬 파일일 경우 임의의 주소로 뜰 수 있으나, 배포 후에는 정상 작동)
+        const currentUrl = window.location.href;
+        
+        new QRCode(qrContainer, {
+          text: currentUrl,
+          width: 160,
+          height: 160,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        });
+        qrCodeGenerated = true;
+      }
+    }
+
+    function closeQR() {
+      qrModal.classList.remove('active');
+    }
+
+    qrModal.addEventListener('click', function(e) {
+      if (e.target === qrModal) {
+        closeQR();
+      }
+    });
+  </script>
 </body>
 </html>
