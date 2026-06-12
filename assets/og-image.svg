@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"
+     font-family="Apple SD Gothic Neo, Malgun Gothic, system-ui, sans-serif">
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="#FAFAF9"/>
+
+  <!-- left accent bar -->
+  <rect x="0" y="0" width="10" height="630" fill="#18325A"/>
+
+  <!-- subtle grid pattern -->
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="420" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- main text block -->
+  <text x="80" y="230" fill="#111827" font-size="88" font-weight="800" letter-spacing="24">
+    김종헌
+  </text>
+
+  <text x="84" y="306" fill="#6B7280" font-size="30">
+    시스템을 관리하던 20년, 이제 AI와 함께 직접 만듭니다.
+  </text>
+
+  <!-- badges row -->
+  <!-- badge 1 -->
+  <rect x="84" y="348" width="220" height="44" rx="22" fill="#EEF2FF"/>
+  <text x="194" y="375" text-anchor="middle" fill="#18325A" font-size="20" font-weight="600">
+    ERP · SCM 전문가
+  </text>
+
+  <!-- badge 2 -->
+  <rect x="320" y="348" width="106" height="44" rx="22" fill="#EEF2FF"/>
+  <text x="373" y="375" text-anchor="middle" fill="#18325A" font-size="20" font-weight="600">
+    PMP
+  </text>
+
+  <!-- badge 3 -->
+  <rect x="442" y="348" width="288" height="44" rx="22" fill="#EEF2FF"/>
+  <text x="586" y="375" text-anchor="middle" fill="#18325A" font-size="20" font-weight="600">
+    ERP 프로젝트 PM 10년+
+  </text>
+
+  <!-- decorative "AI Builder" label -->
+  <rect x="840" y="100" width="276" height="70" rx="12" fill="#18325A"/>
+  <text x="978" y="127" text-anchor="middle" fill="#94A3B8" font-size="14" letter-spacing="3">
+    ALSO
+  </text>
+  <text x="978" y="155" text-anchor="middle" fill="#FFFFFF" font-size="26" font-weight="700">
+    AI Builder
+  </text>
+
+  <!-- project count hint -->
+  <text x="840" y="218" fill="#6B7280" font-size="18">직접 만든 프로젝트 3개</text>
+  <text x="840" y="248" fill="#9CA3AF" font-size="16">기획 · 개발 · 배포 · AI와 함께</text>
+
+  <!-- bottom strip -->
+  <rect x="0" y="490" width="1200" height="140" fill="#F3F4F6"/>
+  <text x="80" y="576" fill="#9CA3AF" font-size="20">
+    jonghun.kim84@gmail.com
+  </text>
+  <text x="1100" y="576" text-anchor="end" fill="#9CA3AF" font-size="20">
+    jongheon-kim.vercel.app
+  </text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     font-family="system-ui, -apple-system, sans-serif">
+
+  <!-- background -->
+  <rect width="800" height="500" fill="#F8FAFC"/>
+
+  <!-- sidebar -->
+  <rect width="196" height="500" fill="#FFFFFF"/>
+  <rect width="196" height="500" fill="none" stroke="#E2E8F0" stroke-width="1" x="0.5"/>
+  <!-- sidebar logo -->
+  <rect x="16" y="18" width="24" height="24" rx="6" fill="#1E40AF"/>
+  <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">대</text>
+  <text x="52" y="32" fill="#1E293B" font-size="13" font-weight="700">입대감사시스템</text>
+
+  <!-- sidebar nav items -->
+  <rect x="12" y="62" width="172" height="34" rx="6" fill="#EFF6FF"/>
+  <text x="38" y="84" fill="#1D4ED8" font-size="12.5" font-weight="600">📋  대시보드</text>
+
+  <text x="38" y="120" fill="#64748B" font-size="12.5">📅  회의 관리</text>
+  <text x="38" y="150" fill="#64748B" font-size="12.5">🗳️  의결 현황</text>
+  <text x="38" y="180" fill="#64748B" font-size="12.5">🔍  감사 보고서</text>
+  <text x="38" y="210" fill="#64748B" font-size="12.5">📁  문서 보관함</text>
+  <text x="38" y="240" fill="#64748B" font-size="12.5">👥  구성원 관리</text>
+
+  <!-- divider in sidebar -->
+  <line x1="16" y1="258" x2="180" y2="258" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="38" y="278" fill="#64748B" font-size="12.5">⚙️  설정</text>
+
+  <!-- main content area -->
+  <!-- top bar -->
+  <rect x="196" y="0" width="604" height="52" fill="#FFFFFF"/>
+  <rect x="196" y="51" width="604" height="1" fill="#E2E8F0"/>
+  <text x="216" y="32" fill="#1E293B" font-size="14" font-weight="700">대시보드</text>
+  <text x="560" y="32" fill="#64748B" font-size="12">관리자: 김종헌</text>
+  <rect x="700" y="14" width="80" height="26" rx="6" fill="#1E40AF"/>
+  <text x="740" y="31" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">회의 등록</text>
+
+  <!-- stats row -->
+  <rect x="212" y="66" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="226" y="86" fill="#64748B" font-size="10.5">이번 달 회의</text>
+  <text x="226" y="114" fill="#1E293B" font-size="26" font-weight="700">3</text>
+
+  <rect x="354" y="66" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="368" y="86" fill="#64748B" font-size="10.5">미결 의결안</text>
+  <text x="368" y="114" fill="#F59E0B" font-size="26" font-weight="700">2</text>
+
+  <rect x="496" y="66" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="510" y="86" fill="#64748B" font-size="10.5">감사 완료율</text>
+  <text x="510" y="114" fill="#16A34A" font-size="26" font-weight="700">87%</text>
+
+  <rect x="638" y="66" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="652" y="86" fill="#64748B" font-size="10.5">다음 회의</text>
+  <text x="652" y="108" fill="#1E293B" font-size="13" font-weight="600">6월 20일</text>
+  <text x="652" y="126" fill="#64748B" font-size="11">오후 7:00 · 관리동</text>
+
+  <!-- recent meetings table -->
+  <rect x="212" y="152" width="576" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="228" y="176" fill="#1E293B" font-size="13" font-weight="700">최근 회의 현황</text>
+
+  <!-- table header -->
+  <rect x="212" y="186" width="576" height="28" fill="#F8FAFC"/>
+  <text x="230" y="204" fill="#64748B" font-size="11">회의명</text>
+  <text x="408" y="204" fill="#64748B" font-size="11">일시</text>
+  <text x="510" y="204" fill="#64748B" font-size="11">의결안</text>
+  <text x="590" y="204" fill="#64748B" font-size="11">감사</text>
+  <text x="680" y="204" fill="#64748B" font-size="11">상태</text>
+  <line x1="212" y1="214" x2="788" y2="214" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- row 1 -->
+  <text x="230" y="234" fill="#1E293B" font-size="12">2026년 5월 정기 회의</text>
+  <text x="408" y="234" fill="#64748B" font-size="11.5">05.16 19:00</text>
+  <text x="510" y="234" fill="#1E293B" font-size="11.5">4건</text>
+  <text x="590" y="234" fill="#16A34A" font-size="11.5">완료</text>
+  <rect x="668" y="223" width="52" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="694" y="236" text-anchor="middle" fill="#16A34A" font-size="10.5" font-weight="600">완료</text>
+  <line x1="212" y1="244" x2="788" y2="244" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 2 -->
+  <text x="230" y="264" fill="#1E293B" font-size="12">임시 회의 — 외벽 보수공사</text>
+  <text x="408" y="264" fill="#64748B" font-size="11.5">05.28 18:30</text>
+  <text x="510" y="264" fill="#1E293B" font-size="11.5">2건</text>
+  <text x="590" y="264" fill="#F59E0B" font-size="11.5">진행중</text>
+  <rect x="668" y="253" width="52" height="18" rx="9" fill="#FEF9C3"/>
+  <text x="694" y="266" text-anchor="middle" fill="#A16207" font-size="10.5" font-weight="600">검토중</text>
+  <line x1="212" y1="274" x2="788" y2="274" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 3 -->
+  <text x="230" y="294" fill="#1E293B" font-size="12">2026년 6월 정기 회의</text>
+  <text x="408" y="294" fill="#64748B" font-size="11.5">06.20 19:00</text>
+  <text x="510" y="294" fill="#94A3B8" font-size="11.5">—</text>
+  <text x="590" y="294" fill="#94A3B8" font-size="11.5">—</text>
+  <rect x="668" y="283" width="52" height="18" rx="9" fill="#F1F5F9"/>
+  <text x="694" y="296" text-anchor="middle" fill="#64748B" font-size="10.5" font-weight="600">예정</text>
+  <line x1="212" y1="304" x2="788" y2="304" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 4 -->
+  <text x="230" y="324" fill="#1E293B" font-size="12">임시 회의 — 엘리베이터 교체</text>
+  <text x="408" y="324" fill="#64748B" font-size="11.5">04.12 19:00</text>
+  <text x="510" y="324" fill="#1E293B" font-size="11.5">3건</text>
+  <text x="590" y="324" fill="#16A34A" font-size="11.5">완료</text>
+  <rect x="668" y="313" width="52" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="694" y="326" text-anchor="middle" fill="#16A34A" font-size="10.5" font-weight="600">완료</text>
+  <line x1="212" y1="334" x2="788" y2="334" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 5 -->
+  <text x="230" y="354" fill="#94A3B8" font-size="12">전체 회의 이력 보기 →</text>
+
+  <!-- pending resolutions panel -->
+  <rect x="212" y="386" width="576" height="98" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="228" y="410" fill="#92400E" font-size="12" font-weight="700">⚠  미결 의결안 처리 필요</text>
+  <text x="228" y="432" fill="#78350F" font-size="11.5">외벽 보수공사 업체 선정 건</text>
+  <text x="228" y="450" fill="#78350F" font-size="11.5">주민 동의서 수집 기한: 2026-06-18</text>
+  <rect x="668" y="446" width="100" height="26" rx="6" fill="#F59E0B"/>
+  <text x="718" y="463" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">처리하기</text>
+</svg>

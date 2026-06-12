@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     font-family="system-ui, -apple-system, sans-serif">
+
+  <!-- background -->
+  <rect width="800" height="500" fill="#0F172A"/>
+
+  <!-- top nav -->
+  <rect width="800" height="46" fill="#1E293B"/>
+  <rect x="16" y="13" width="20" height="20" rx="5" fill="#3B82F6"/>
+  <text x="44" y="28" fill="#F1F5F9" font-size="13" font-weight="600">자산 포트폴리오 AI</text>
+  <text x="560" y="28" fill="#94A3B8" font-size="12">대시보드</text>
+  <text x="626" y="28" fill="#94A3B8" font-size="12">포트폴리오</text>
+  <text x="708" y="28" fill="#94A3B8" font-size="12">설정</text>
+
+  <!-- summary cards row -->
+  <!-- card 1: 총 자산 (DEMO) -->
+  <rect x="16" y="60" width="238" height="86" rx="8" fill="#1E293B"/>
+  <text x="30" y="80" fill="#94A3B8" font-size="10.5">총 자산 (DEMO)</text>
+  <text x="30" y="112" fill="#F1F5F9" font-size="22" font-weight="700">₩ 3.24억</text>
+  <text x="30" y="132" fill="#22C55E" font-size="11">▲ +8.2%  전년 대비</text>
+
+  <!-- card 2: 월 연금 예상 -->
+  <rect x="274" y="60" width="238" height="86" rx="8" fill="#1E293B"/>
+  <text x="288" y="80" fill="#94A3B8" font-size="10.5">월 연금 예상 수령 (65세)</text>
+  <text x="288" y="112" fill="#F1F5F9" font-size="22" font-weight="700">₩ 280만</text>
+  <text x="288" y="132" fill="#64748B" font-size="11">국민연금 + 개인연금 합산</text>
+
+  <!-- card 3: AI 어드바이저 -->
+  <rect x="532" y="60" width="252" height="86" rx="8" fill="#1E293B"/>
+  <rect x="532" y="60" width="4" height="86" rx="2" fill="#3B82F6"/>
+  <text x="546" y="80" fill="#94A3B8" font-size="10.5">AI 어드바이저</text>
+  <text x="546" y="102" fill="#F1F5F9" font-size="12" font-weight="500">배당주 리밸런싱 권장</text>
+  <text x="546" y="120" fill="#F59E0B" font-size="11">성장주 → 배당주 단계적 전환</text>
+  <text x="546" y="136" fill="#64748B" font-size="10.5">업데이트: 오늘</text>
+
+  <!-- asset allocation chart area -->
+  <rect x="16" y="162" width="360" height="210" rx="8" fill="#1E293B"/>
+  <text x="30" y="184" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="1">자산 배분</text>
+
+  <!-- horizontal bar chart -->
+  <!-- row bg lines -->
+  <text x="30" y="210" fill="#94A3B8" font-size="11">국내주식</text>
+  <rect x="106" y="199" width="180" height="14" rx="4" fill="#1E3A5F"/>
+  <rect x="106" y="199" width="162" height="14" rx="4" fill="#3B82F6"/>
+  <text x="296" y="211" fill="#F1F5F9" font-size="11" font-weight="600">45%</text>
+
+  <text x="30" y="238" fill="#94A3B8" font-size="11">채권</text>
+  <rect x="106" y="227" width="180" height="14" rx="4" fill="#1E3A5F"/>
+  <rect x="106" y="227" width="97" height="14" rx="4" fill="#22C55E"/>
+  <text x="296" y="239" fill="#F1F5F9" font-size="11" font-weight="600">27%</text>
+
+  <text x="30" y="266" fill="#94A3B8" font-size="11">리츠 ETF</text>
+  <rect x="106" y="255" width="180" height="14" rx="4" fill="#1E3A5F"/>
+  <rect x="106" y="255" width="72" height="14" rx="4" fill="#F59E0B"/>
+  <text x="296" y="267" fill="#F1F5F9" font-size="11" font-weight="600">20%</text>
+
+  <text x="30" y="294" fill="#94A3B8" font-size="11">현금성</text>
+  <rect x="106" y="283" width="180" height="14" rx="4" fill="#1E3A5F"/>
+  <rect x="106" y="283" width="29" height="14" rx="4" fill="#64748B"/>
+  <text x="296" y="295" fill="#F1F5F9" font-size="11" font-weight="600">8%</text>
+
+  <!-- monthly trend sparkline placeholder -->
+  <text x="30" y="328" fill="#94A3B8" font-size="10.5">12개월 추이</text>
+  <polyline points="30,360 65,352 100,358 135,345 170,348 205,337 240,341 275,328 310,332 345,318 350,315"
+            fill="none" stroke="#3B82F6" stroke-width="1.8" stroke-linejoin="round"/>
+  <circle cx="350" cy="315" r="3" fill="#3B82F6"/>
+
+  <!-- holdings table -->
+  <rect x="392" y="162" width="392" height="210" rx="8" fill="#1E293B"/>
+  <!-- table header -->
+  <rect x="392" y="162" width="392" height="30" rx="8" fill="#334155"/>
+  <rect x="392" y="178" width="392" height="14" fill="#334155"/>
+  <text x="406" y="182" fill="#94A3B8" font-size="10.5">종목명</text>
+  <text x="510" y="182" fill="#94A3B8" font-size="10.5">평가금액</text>
+  <text x="614" y="182" fill="#94A3B8" font-size="10.5">수익률</text>
+  <text x="710" y="182" fill="#94A3B8" font-size="10.5">비중</text>
+
+  <!-- rows -->
+  <text x="406" y="210" fill="#F1F5F9" font-size="11.5">삼성전자</text>
+  <text x="510" y="210" fill="#F1F5F9" font-size="11.5">5,240만</text>
+  <text x="614" y="210" fill="#22C55E" font-size="11.5">+12.4%</text>
+  <text x="710" y="210" fill="#94A3B8" font-size="11.5">16.1%</text>
+  <line x1="392" y1="218" x2="784" y2="218" stroke="#334155" stroke-width="1"/>
+
+  <text x="406" y="237" fill="#F1F5F9" font-size="11.5">KODEX 200</text>
+  <text x="510" y="237" fill="#F1F5F9" font-size="11.5">4,110만</text>
+  <text x="614" y="237" fill="#22C55E" font-size="11.5">+7.8%</text>
+  <text x="710" y="237" fill="#94A3B8" font-size="11.5">12.7%</text>
+  <line x1="392" y1="245" x2="784" y2="245" stroke="#334155" stroke-width="1"/>
+
+  <text x="406" y="264" fill="#F1F5F9" font-size="11.5">국고채 3년</text>
+  <text x="510" y="264" fill="#F1F5F9" font-size="11.5">3,800만</text>
+  <text x="614" y="264" fill="#EF4444" font-size="11.5">-1.2%</text>
+  <text x="710" y="264" fill="#94A3B8" font-size="11.5">11.7%</text>
+  <line x1="392" y1="272" x2="784" y2="272" stroke="#334155" stroke-width="1"/>
+
+  <text x="406" y="291" fill="#F1F5F9" font-size="11.5">리츠 ETF</text>
+  <text x="510" y="291" fill="#F1F5F9" font-size="11.5">3,200만</text>
+  <text x="614" y="291" fill="#22C55E" font-size="11.5">+4.1%</text>
+  <text x="710" y="291" fill="#94A3B8" font-size="11.5">9.9%</text>
+  <line x1="392" y1="299" x2="784" y2="299" stroke="#334155" stroke-width="1"/>
+
+  <text x="406" y="318" fill="#94A3B8" font-size="11.5">현금성자산</text>
+  <text x="510" y="318" fill="#94A3B8" font-size="11.5">2,600만</text>
+  <text x="614" y="318" fill="#94A3B8" font-size="11.5">+0.4%</text>
+  <text x="710" y="318" fill="#94A3B8" font-size="11.5">8.0%</text>
+  <line x1="392" y1="326" x2="784" y2="326" stroke="#334155" stroke-width="1"/>
+
+  <text x="406" y="345" fill="#64748B" font-size="11">합계</text>
+  <text x="510" y="345" fill="#F1F5F9" font-size="11.5" font-weight="600">3억 2,450만</text>
+  <text x="710" y="345" fill="#94A3B8" font-size="11.5">100%</text>
+
+  <!-- pension simulator bottom bar -->
+  <rect x="16" y="386" width="768" height="92" rx="8" fill="#1E293B"/>
+  <rect x="16" y="386" width="4" height="92" rx="2" fill="#3B82F6"/>
+  <text x="36" y="408" fill="#3B82F6" font-size="10.5" font-weight="700" letter-spacing="1">연금 세금 시뮬레이션</text>
+  <text x="36" y="430" fill="#F1F5F9" font-size="12.5">연분리과세 선택 시 예상 납부세액</text>
+  <rect x="36" y="440" width="260" height="12" rx="4" fill="#334155"/>
+  <rect x="36" y="440" width="175" height="12" rx="4" fill="#3B82F6"/>
+  <text x="306" y="451" fill="#F59E0B" font-size="12" font-weight="600">₩ 124만 / 년</text>
+  <text x="36" y="468" fill="#64748B" font-size="10.5">국민연금 + 개인연금 합산 기준 · 종합과세 대비 ₩38만 절감</text>
+</svg>

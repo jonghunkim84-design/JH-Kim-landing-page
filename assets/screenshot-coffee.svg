@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     font-family="system-ui, -apple-system, sans-serif">
+
+  <!-- background -->
+  <rect width="800" height="500" fill="#F8FAFC"/>
+
+  <!-- top nav -->
+  <rect width="800" height="52" fill="#FFFFFF"/>
+  <rect y="51" width="800" height="1" fill="#E2E8F0"/>
+  <!-- logo -->
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#92400E"/>
+  <text x="29" y="30" text-anchor="middle" fill="#FFFFFF" font-size="14">☕</text>
+  <text x="52" y="32" fill="#1E293B" font-size="14" font-weight="700">카페 재고관리</text>
+  <!-- nav items -->
+  <text x="280" y="32" fill="#1D4ED8" font-size="12.5" font-weight="600">재고 현황</text>
+  <text x="356" y="32" fill="#64748B" font-size="12.5">레시피 관리</text>
+  <text x="444" y="32" fill="#64748B" font-size="12.5">발주 내역</text>
+  <text x="516" y="32" fill="#64748B" font-size="12.5">로트 추적</text>
+  <!-- right area -->
+  <rect x="672" y="14" width="112" height="26" rx="6" fill="#92400E"/>
+  <text x="728" y="31" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="600">발주 등록</text>
+
+  <!-- page header row -->
+  <text x="24" y="80" fill="#1E293B" font-size="16" font-weight="700">재고 현황</text>
+  <text x="24" y="100" fill="#64748B" font-size="12">2026-06-12 기준 · 총 24개 품목</text>
+
+  <!-- summary stat chips -->
+  <rect x="24" y="112" width="120" height="32" rx="6" fill="#DCFCE7"/>
+  <text x="84" y="132" text-anchor="middle" fill="#15803D" font-size="12" font-weight="600">정상 18품목</text>
+
+  <rect x="154" y="112" width="120" height="32" rx="6" fill="#FEF9C3"/>
+  <text x="214" y="132" text-anchor="middle" fill="#A16207" font-size="12" font-weight="600">주의 4품목</text>
+
+  <rect x="284" y="112" width="120" height="32" rx="6" fill="#FEE2E2"/>
+  <text x="344" y="132" text-anchor="middle" fill="#DC2626" font-size="12" font-weight="600">재주문 2품목</text>
+
+  <!-- inventory table -->
+  <rect x="16" y="158" width="768" height="316" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- table header -->
+  <rect x="16" y="158" width="768" height="32" rx="10" fill="#F8FAFC"/>
+  <rect x="16" y="174" width="768" height="16" fill="#F8FAFC"/>
+  <line x1="16" y1="190" x2="784" y2="190" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="36" y="179" fill="#64748B" font-size="11">품목명</text>
+  <text x="210" y="179" fill="#64748B" font-size="11">카테고리</text>
+  <text x="320" y="179" fill="#64748B" font-size="11">현재고</text>
+  <text x="410" y="179" fill="#64748B" font-size="11">최소재고</text>
+  <text x="510" y="179" fill="#64748B" font-size="11">입고예정</text>
+  <text x="620" y="179" fill="#64748B" font-size="11">최근차감</text>
+  <text x="710" y="179" fill="#64748B" font-size="11">상태</text>
+
+  <!-- rows -->
+  <!-- row 1: 에스프레소 원두 A (재주문 필요) -->
+  <text x="36" y="218" fill="#1E293B" font-size="12.5" font-weight="500">에스프레소 원두 A</text>
+  <text x="210" y="218" fill="#64748B" font-size="12">원두</text>
+  <text x="320" y="218" fill="#DC2626" font-size="12" font-weight="700">0.8 kg</text>
+  <text x="410" y="218" fill="#64748B" font-size="12">2.0 kg</text>
+  <text x="510" y="218" fill="#64748B" font-size="12">—</text>
+  <text x="620" y="218" fill="#64748B" font-size="12">-0.2 kg 어제</text>
+  <rect x="700" y="207" width="72" height="18" rx="9" fill="#FEE2E2"/>
+  <text x="736" y="220" text-anchor="middle" fill="#DC2626" font-size="10.5" font-weight="600">재주문 필요</text>
+  <line x1="16" y1="228" x2="784" y2="228" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 2: 우유 (재주문 필요) -->
+  <text x="36" y="248" fill="#1E293B" font-size="12.5" font-weight="500">전지우유</text>
+  <text x="210" y="248" fill="#64748B" font-size="12">유제품</text>
+  <text x="320" y="248" fill="#DC2626" font-size="12" font-weight="700">1.2 L</text>
+  <text x="410" y="248" fill="#64748B" font-size="12">3.0 L</text>
+  <text x="510" y="248" fill="#1D4ED8" font-size="12">6월 13일</text>
+  <text x="620" y="248" fill="#64748B" font-size="12">-0.6 L 오늘</text>
+  <rect x="700" y="237" width="72" height="18" rx="9" fill="#FEE2E2"/>
+  <text x="736" y="250" text-anchor="middle" fill="#DC2626" font-size="10.5" font-weight="600">재주문 필요</text>
+  <line x1="16" y1="258" x2="784" y2="258" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 3: 시럽 (주의) -->
+  <text x="36" y="278" fill="#1E293B" font-size="12.5" font-weight="500">바닐라 시럽</text>
+  <text x="210" y="278" fill="#64748B" font-size="12">시럽</text>
+  <text x="320" y="278" fill="#A16207" font-size="12" font-weight="600">350 mL</text>
+  <text x="410" y="278" fill="#64748B" font-size="12">300 mL</text>
+  <text x="510" y="278" fill="#64748B" font-size="12">—</text>
+  <text x="620" y="278" fill="#64748B" font-size="12">-30 mL 어제</text>
+  <rect x="700" y="267" width="52" height="18" rx="9" fill="#FEF9C3"/>
+  <text x="726" y="280" text-anchor="middle" fill="#A16207" font-size="10.5" font-weight="600">주의</text>
+  <line x1="16" y1="288" x2="784" y2="288" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 4: 원두 B (정상) -->
+  <text x="36" y="308" fill="#1E293B" font-size="12.5">블렌드 원두 B</text>
+  <text x="210" y="308" fill="#64748B" font-size="12">원두</text>
+  <text x="320" y="308" fill="#15803D" font-size="12">4.5 kg</text>
+  <text x="410" y="308" fill="#64748B" font-size="12">2.0 kg</text>
+  <text x="510" y="308" fill="#64748B" font-size="12">—</text>
+  <text x="620" y="308" fill="#64748B" font-size="12">-0.3 kg 오늘</text>
+  <rect x="700" y="297" width="52" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="726" y="310" text-anchor="middle" fill="#15803D" font-size="10.5" font-weight="600">정상</text>
+  <line x1="16" y1="318" x2="784" y2="318" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 5: 시럽2 (정상) -->
+  <text x="36" y="338" fill="#1E293B" font-size="12.5">카라멜 시럽</text>
+  <text x="210" y="338" fill="#64748B" font-size="12">시럽</text>
+  <text x="320" y="338" fill="#15803D" font-size="12">720 mL</text>
+  <text x="410" y="338" fill="#64748B" font-size="12">300 mL</text>
+  <text x="510" y="338" fill="#64748B" font-size="12">—</text>
+  <text x="620" y="338" fill="#64748B" font-size="12">-20 mL 어제</text>
+  <rect x="700" y="327" width="52" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="726" y="340" text-anchor="middle" fill="#15803D" font-size="10.5" font-weight="600">정상</text>
+  <line x1="16" y1="348" x2="784" y2="348" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 6: 설탕 -->
+  <text x="36" y="368" fill="#1E293B" font-size="12.5">설탕</text>
+  <text x="210" y="368" fill="#64748B" font-size="12">부재료</text>
+  <text x="320" y="368" fill="#15803D" font-size="12">1.8 kg</text>
+  <text x="410" y="368" fill="#64748B" font-size="12">0.5 kg</text>
+  <text x="510" y="368" fill="#64748B" font-size="12">—</text>
+  <text x="620" y="368" fill="#64746B" font-size="12">-50 g 오늘</text>
+  <rect x="700" y="357" width="52" height="18" rx="9" fill="#DCFCE7"/>
+  <text x="726" y="370" text-anchor="middle" fill="#15803D" font-size="10.5" font-weight="600">정상</text>
+  <line x1="16" y1="378" x2="784" y2="378" stroke="#F1F5F9" stroke-width="1"/>
+
+  <!-- row 7: 페이지 더보기 -->
+  <text x="36" y="406" fill="#94A3B8" font-size="12">+ 17개 품목 더 보기</text>
+
+  <!-- lot tracking info box at bottom right -->
+  <rect x="460" y="388" width="324" height="72" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="476" y="408" fill="#1E40AF" font-size="11" font-weight="600">📦 선입선출 로트 추적</text>
+  <text x="476" y="426" fill="#1E293B" font-size="11">에스프레소 원두 A — Lot #2024-05</text>
+  <text x="476" y="444" fill="#64748B" font-size="10.5">입고: 2026-05-08 · 잔여: 0.8 kg · 유통기한: 2026-11-08</text>
+</svg>
