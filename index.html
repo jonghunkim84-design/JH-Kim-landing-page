@@ -9,7 +9,7 @@
   <!-- Open Graph (카카오톡·문자 공유 미리보기) -->
   <meta property="og:title" content="김종헌 — ERP·SCM 전문가 · AI Builder">
   <meta property="og:description" content="시스템을 관리하던 20년, 이제 AI와 함께 직접 만듭니다.">
-  <meta property="og:image" content="assets/og-image.svg">
+  <meta property="og:image" content="assets/og-image.png">
   <meta property="og:url" content="https://jongheon-kim.vercel.app">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
@@ -24,12 +24,14 @@
     }
 
     :root {
-      --bg:           #FAFAF9;
+      --navy:         #1C3166;
+      --navy-dark:    #152549;
+      --bg:           #F0F2F7;
       --surface:      #FFFFFF;
       --text:         #111827;
       --text-2:       #6B7280;
-      --accent:       #18325A;
-      --accent-light: #EEF2FF;
+      --accent:       #1C3166;
+      --accent-light: #E8EDF8;
       --border:       #E5E7EB;
       --divider:      #F3F4F6;
       --r:            10px;
@@ -47,55 +49,66 @@
       font-size: 16px;
     }
 
+    /* ─── MAX-WIDTH CENTERING ─── */
     .wrap {
       max-width: 640px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* ─── HERO ─── */
+    /* ─── HERO: dark navy full-width ─── */
     .hero {
-      padding: 60px 0 52px;
+      background: var(--navy);
+      padding: 52px 0 60px;
       text-align: center;
     }
 
+    /* photo wrapper — portrait card shape */
+    .hero-photo-wrap {
+      width: 96px;
+      height: 120px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+      margin: 0 auto 28px;
+      background: rgba(255,255,255,0.1);
+    }
+
     .hero-photo {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: top center;
-      border: 1px solid var(--border);
       display: block;
-      margin: 0 auto 28px;
     }
 
     .hero-initial {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 1.75rem;
+      width: 96px;
+      height: 120px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      font-size: 2rem;
       font-weight: 700;
       display: none;
       align-items: center;
       justify-content: center;
       margin: 0 auto 28px;
+      border: 3px solid rgba(255, 255, 255, 0.25);
     }
 
     .hero h1 {
       font-size: 2.4rem;
       font-weight: 800;
       letter-spacing: 0.15em;
-      color: var(--text);
+      color: #FFFFFF;
       margin-bottom: 14px;
       line-height: 1.2;
     }
 
     .hero-tagline {
       font-size: 1.05rem;
-      color: var(--text-2);
+      color: rgba(255, 255, 255, 0.78);
       line-height: 1.65;
       word-break: keep-all;
       margin-bottom: 36px;
@@ -129,22 +142,37 @@
 
     .btn:active { transform: scale(0.96); }
 
+    /* 히어로 위의 기본 버튼: 흰색 */
     .btn-fill {
-      background: var(--accent);
-      color: #fff;
+      background: #FFFFFF;
+      color: var(--navy);
     }
-
     .btn-fill:hover { opacity: 0.88; }
 
     .btn-outline {
       background: transparent;
-      color: var(--text);
-      border: 1.5px solid var(--border);
+      color: #FFFFFF;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+    }
+    .btn-outline:hover {
+      border-color: #FFFFFF;
+      background: rgba(255,255,255,0.08);
     }
 
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+    /* 콘텐츠 영역의 버튼: 네이비 */
+    .btn-navy {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+    .btn-navy:hover { opacity: 0.88; }
+
+    /* ─── CONTENT AREA ─── */
+    .content-area {
+      background: var(--surface);
+      border-radius: 0 0 16px 16px;
+      max-width: 640px;
+      margin: 0 auto;
+      overflow: hidden;
     }
 
     /* ─── RULE ─── */
@@ -152,11 +180,11 @@
       height: 1px;
       background: var(--border);
       border: none;
-      margin: 0;
+      margin: 0 24px;
     }
 
     /* ─── SECTION ─── */
-    .section { padding: 52px 0; }
+    .section { padding: 48px 24px; }
 
     .section-label {
       font-size: 0.68rem;
@@ -196,7 +224,7 @@
     .projects-list {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
     }
 
     .project-card {
@@ -215,7 +243,7 @@
     }
 
     .project-body {
-      padding: 18px 20px 20px;
+      padding: 16px 18px 18px;
     }
 
     .project-title {
@@ -249,7 +277,7 @@
     }
 
     .projects-note {
-      margin-top: 24px;
+      margin-top: 20px;
       font-size: 0.875rem;
       color: var(--text-2);
       text-align: center;
@@ -270,37 +298,68 @@
 
     .contact-email-link:hover { color: var(--accent); }
 
+    /* ─── QR ─── */
+    .qr-block {
+      text-align: center;
+    }
+
+    .qr-img {
+      width: 160px;
+      height: 160px;
+      display: block;
+      margin: 0 auto 10px;
+      object-fit: contain;
+    }
+
+    .qr-caption {
+      font-size: 0.8rem;
+      color: var(--text-2);
+    }
+
     /* ─── FOOTER ─── */
     footer {
-      padding: 28px 0 48px;
-      border-top: 1px solid var(--border);
+      padding: 24px 0 40px;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     .footer-text {
       font-size: 0.8rem;
       color: var(--text-2);
       text-align: center;
+      padding: 0 24px;
     }
 
     /* ─── RESPONSIVE ─── */
     @media (min-width: 480px) {
       .hero h1 { font-size: 2.75rem; }
     }
+
+    /* desktop: content card has rounded top too */
+    @media (min-width: 640px) {
+      .content-area {
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      }
+      body { padding: 0; }
+    }
   </style>
 </head>
 <body>
 
-<div class="wrap">
+<!-- ① 히어로: 다크 네이비 전체 너비 -->
+<div class="hero">
+  <div class="wrap">
 
-  <!-- ① 히어로 -->
-  <div class="hero">
-    <img src="photo.jpg"
-         class="hero-photo"
-         alt="김종헌 프로필 사진"
-         id="hero-photo"
-         onerror="this.style.display='none';
-                  var i=document.getElementById('hero-init');
-                  i.style.display='flex';">
+    <div class="hero-photo-wrap" id="hero-photo-wrap">
+      <img src="jhkim%20photo.jpg"
+           class="hero-photo"
+           alt="김종헌 프로필 사진"
+           id="hero-photo"
+           onerror="document.getElementById('hero-photo-wrap').style.display='none';
+                    var i=document.getElementById('hero-init');
+                    i.style.display='flex';">
+    </div>
     <div class="hero-initial" id="hero-init">김</div>
 
     <h1>김종헌</h1>
@@ -328,9 +387,12 @@
         이메일 보내기
       </a>
     </div>
-  </div>
 
-  <hr class="rule">
+  </div>
+</div><!-- /hero -->
+
+<!-- 콘텐츠 카드: 흰 배경 -->
+<div class="content-area">
 
   <!-- ② 소개 + ③ 경력 배지 -->
   <div class="section">
@@ -352,7 +414,6 @@
     <p class="section-label">만든 것들</p>
     <div class="projects-list">
 
-      <!-- 은퇴자산 포트폴리오 AI -->
       <div class="project-card">
         <img src="assets/screenshot-portfolio.svg"
              alt="은퇴자산 포트폴리오 AI 대시보드 — 자산 현황 및 연금 시뮬레이션 인터페이스 (데모 화면)"
@@ -368,7 +429,6 @@
         </div>
       </div>
 
-      <!-- 입주자대표회의 감사 시스템 -->
       <div class="project-card">
         <img src="assets/screenshot-audit.svg"
              alt="입주자대표회의 감사 시스템 — 회의·의결·감사 워크플로우 화면"
@@ -383,7 +443,6 @@
         </div>
       </div>
 
-      <!-- 커피숍 재고관리 -->
       <div class="project-card">
         <img src="assets/screenshot-coffee.svg"
              alt="커피숍 재고관리 — 레시피 기반 자동 차감 및 발주 자동화 화면"
@@ -418,7 +477,7 @@
       jonghun.kim84@gmail.com
     </a>
     <br>
-    <a href="assets/kim-jonghun.vcf" download="김종헌.vcf" class="btn btn-fill">
+    <a href="assets/kim-jonghun.vcf" download="김종헌.vcf" class="btn btn-navy">
       <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
            stroke="currentColor" stroke-width="1.8"
            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -428,13 +487,22 @@
     </a>
   </div>
 
-</div><!-- /wrap -->
+  <hr class="rule">
+
+  <!-- QR 코드 -->
+  <div class="section qr-block">
+    <p class="section-label">QR 코드</p>
+    <img src="assets/QR%20Code.png"
+         alt="jongheon-kim.vercel.app QR 코드 — 카메라로 스캔하면 이 페이지로 연결됩니다"
+         class="qr-img">
+    <p class="qr-caption">카메라로 스캔하면 이 페이지로 연결됩니다</p>
+  </div>
+
+</div><!-- /content-area -->
 
 <!-- ⑥ 푸터 -->
 <footer>
-  <div class="wrap">
-    <p class="footer-text">이 페이지도 AI와 함께 만들었습니다 · 2026</p>
-  </div>
+  <p class="footer-text">이 페이지도 AI와 함께 만들었습니다 · 2026</p>
 </footer>
 
 </body>
