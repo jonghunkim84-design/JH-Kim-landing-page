@@ -1,4 +1,4 @@
-const CACHE = 'jhkim-v1';
+const CACHE = 'jhkim-v2';
 const ASSETS = ['/', '/index.html', '/manifest.json', '/favicon.svg',
   '/jhkim%20photo.jpg', '/assets/icon-192.png', '/assets/icon-512.png',
   '/assets/QR%20Code.png', '/assets/screenshot-portfolio.svg',
