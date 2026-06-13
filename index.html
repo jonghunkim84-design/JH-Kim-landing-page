@@ -15,6 +15,13 @@
   <meta property="og:locale" content="ko_KR">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="김종헌">
+  <meta name="theme-color" content="#0B4F4A">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
 
   <style>
     *, *::before, *::after {
@@ -24,14 +31,14 @@
     }
 
     :root {
-      --navy:         #1C3166;
-      --navy-dark:    #152549;
-      --bg:           #F0F2F7;
+      --navy:         #0B4F4A;
+      --navy-dark:    #083836;
+      --bg:           #F0F5F4;
       --surface:      #FFFFFF;
       --text:         #111827;
       --text-2:       #6B7280;
-      --accent:       #1C3166;
-      --accent-light: #E8EDF8;
+      --accent:       #12847C;
+      --accent-light: #D3EDEA;
       --border:       #E5E7EB;
       --divider:      #F3F4F6;
       --r:            10px;
@@ -63,14 +70,13 @@
       text-align: center;
     }
 
-    /* photo wrapper — portrait card shape, warm amber border */
+    /* photo wrapper — portrait card shape */
     .hero-photo-wrap {
       width: 100px;
       height: 126px;
       border-radius: 20px;
       overflow: hidden;
-      border: 5px solid #F2D5A0;   /* 따뜻한 황금 테두리 */
-      background: #F2D5A0;
+      background: rgba(255, 255, 255, 0.12);
       margin: 0 auto 28px;
     }
 
@@ -97,7 +103,6 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 28px;
-      border: 5px solid #F2D5A0;
     }
 
     .hero h1 {
@@ -171,7 +176,7 @@
 
     /* ─── CONTENT AREA ─── */
     .content-area {
-      background: var(--surface);
+      background: #12847C;
       border-radius: 0 0 16px 16px;
       max-width: 640px;
       margin: 0 auto;
@@ -194,7 +199,7 @@
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: #E97132;
       margin-bottom: 20px;
     }
 
@@ -202,7 +207,7 @@
     .about-body {
       font-size: 1rem;
       line-height: 1.9;
-      color: var(--text);
+      color: #FFFFFF;
       word-break: keep-all;
     }
 
@@ -401,7 +406,8 @@
   <div class="section">
     <p class="section-label">About</p>
     <p class="about-body">
-      ERP·SCM 분야 20년 이상의 전문성과 10년의 프로젝트 PM 및 QA 경력을 갖춘 실무형 리더입니다(PMP). 계획하고 조율하는 일을 오래 했고, 지금은 AI 도구와 함께 기획부터 개발·배포까지 직접 만들고 있습니다. 조용히, 꾸준히, 끝까지 만드는 것을 좋아합니다. AI가 바꾸는 일하는 방식을 더 많은 사람과 함께 경험하고 싶습니다.
+      "계획만 하던 사람이, 이제는 직접 만듭니다."<br><br>
+      ERP·SCM 분야 20년, 프로젝트 PM·QA 10년의 경력(PMP)으로 수십 개의 시스템 구축을 조율해 왔습니다. 지금은 AI 도구를 활용해 기획부터 개발·배포까지 직접 실행합니다. 조용히, 꾸준히, 끝까지 — 일하는 방식은 변하지 않았지만, AI가 가능성의 범위를 바꿔놓았습니다. 그 경험을 더 많은 사람과 나누고 싶습니다.
     </p>
     <div class="badges">
       <span class="badge">ERP · SCM 전문가</span>
@@ -508,5 +514,11 @@
   <p class="footer-text">이 페이지도 AI와 함께 만들었습니다 · 2026</p>
 </footer>
 
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+</script>
 </body>
 </html>
